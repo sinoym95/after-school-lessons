@@ -51,7 +51,6 @@
 
 
 
-         <!-- Product Page -->
          <main v-if="!isCheckout">
              <div v-for="lesson in sortedLessons" :key="lesson.id" class="lesson-box">
                  <h1>{{ lesson.title }}</h1>
@@ -71,7 +70,6 @@
 
 
 
-         <!-- Checkout Page -->
          <main v-else>
              <h1 class="checkout-header">Welcome to the Checkout Page</h1>
              <p class="cart-summary"><strong>Your current items in the cart are ({{ totalItemsInCart }} in total)</strong></p>
@@ -89,7 +87,6 @@
 
 
 
-             <!-- Checkout Process Section -->
              <h2 class="checkout-title">Checkout Process</h2>
 
 
@@ -107,7 +104,6 @@
 
 
 
-             <!-- Order Info Section -->
              <h2 class="order-info-title">Order Information</h2>
              <p><strong>Name:</strong> {{ checkoutName }}</p>
              <p><strong>Phone:</strong> {{ checkoutPhone }}</p>
@@ -115,7 +111,6 @@
 
 
 
-             <!-- Place Order Button (Disabled until validation is met) -->
              <button class="place-order-button" :disabled="!isFormValid" v-on:click="placeOrder">Place Order</button>
          </main>
      </div>
